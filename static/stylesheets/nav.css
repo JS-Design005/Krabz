@@ -1,0 +1,132 @@
+/* Header */
+header {
+    height: 60px;
+    Background-color: var(--clr-white);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header-logo {
+    background-color: none;
+    
+    max-width: 100px;
+    display: block;
+    height: calc(var(--header-inner-height) - 30px);
+    margin-left: 2em;
+    margin-top: none;
+    top: none;
+    z-index: 2000;
+}
+
+.header-logo img {
+    top: none;
+    max-width: 140px;
+    
+}
+
+.nav {
+    background: linear-gradient(
+        var(--clr-purple),
+        rgba(34, 6, 87, 0)
+    ),
+    url(../assets/branding/pattern-01.webp);
+
+    position: fixed;
+    color: var(--clr-blue);
+    top: 0;
+    bottom: 0;
+    Left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    Flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list a {
+    font-family: var(--ff-primary);
+    color: var(--clr-white);
+    text-decoration: none;
+}
+
+.nav__list a:hover {
+    color: var(--clr-yellow);
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0em;
+    margin-right: 2em;
+    z-index: 1000;    
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-10px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+.hamburger {
+    background: var(--clr-pink);
+    width: 2em;
+    height: 3em;
+    border-radius: 1em;
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-pink);
+    width: 3em;
+    height: 4px;
+    border-radius: 1em;
+    transition: 250ms;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {top: 10px;}
+.hamburger::after { bottom: 10px;}

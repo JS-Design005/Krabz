@@ -9,13 +9,30 @@
 
         <link rel="icon" type="image/png" href="static/assets/branding/favicon.png">
         <link rel="stylesheet" href="static/stylesheets/branding.css">
+        <link rel="stylesheet" href="static/stylesheets/typography.css">
+        <link rel="stylesheet" href="static/stylesheets/nav.css">
 
         <title>Krabz</title>
 
     </head>
     <body>
         <header>
-
+            <div class="header-logo"> 
+                <img src="static/assets/branding/header-logo.webp" alt="Logo" oncontextmenu="return false">
+            </div>
+            <!-- Hamburger menu, inspired by a youtube video -->
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
 
@@ -25,5 +42,7 @@
 
           </small>
         </footer>
+        
+        <script src="static/scripts/nav.js"></script>
     </body>
 </html>
