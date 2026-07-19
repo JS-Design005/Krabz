@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --clr-pink: #B52555;
+    --clr-yellow: #F1B434;
+    --clr-blue: #1D4F91;
+    --clr-purple: #2E1A47;
+    --clr-white: #dcdbdf;
+    --clr-black: #112;
+
+    --ff-primary:'Soft Mashmallow';
+    --ff-secondary: 'Verdana';
+}
+
+@font-face {
+    font-family: Soft Mashmallow;
+    src: url('../fonts/Soft\ Marshmallow.woff') format('woff');
+}
