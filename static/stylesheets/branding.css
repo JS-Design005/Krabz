@@ -20,7 +20,6 @@ html {
     --ff-secondary: 'Verdana';
 }
 
-@font-face {
-    font-family: Soft Mashmallow;
-    src: url('../fonts/Soft\ Marshmallow.woff') format('woff');
+body {
+    background-image: url(../assets/branding/pattern-01.webp);
 }

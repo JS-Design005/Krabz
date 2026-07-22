@@ -1,39 +1,28 @@
 /* Header */
 header {
-    height: 60px;
-    Background-color: var(--clr-white);
-    width: 100%;
+    Background-color: var(--clr-purple);
     position: fixed;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    min-height: 60px;
+    width: 100%;
     z-index: 5;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 1.5em;
 }
 
 .header-logo {
-    background-color: none;
-    
-    max-width: 100px;
     display: block;
-    height: calc(var(--header-inner-height) - 30px);
-    margin-left: 2em;
-    margin-top: none;
-    top: none;
+    user-select: none;
+    max-width: 100px;
     z-index: 2000;
-}
-
-.header-logo img {
-    top: none;
-    max-width: 140px;
-    
 }
 
 .nav {
     background: linear-gradient(
         var(--clr-purple),
-        rgba(34, 6, 87, 0)
+        #2e1a479d
     ),
     url(../assets/branding/pattern-01.webp);
 
@@ -64,20 +53,25 @@ header {
     font-family: var(--ff-primary);
     color: var(--clr-white);
     text-decoration: none;
+    user-select: none;
 }
 
 .nav__list a:hover {
     color: var(--clr-yellow);
 }
 
+.nav__list a:active {
+    color: var(--clr-white);
+}
+
 .nav-toggle {
-    padding: .5em;
     background: transparent;
-    border: 0;
     cursor: pointer;
     position: absolute;
-    right: 0em;
-    margin-right: 2em;
+    padding: .5em;
+    border: 0;
+    right: 0;
+    margin-right: 1.5em;
     z-index: 1000;    
 }
 
@@ -102,10 +96,6 @@ header {
 }
 
 .hamburger {
-    background: var(--clr-pink);
-    width: 2em;
-    height: 3em;
-    border-radius: 1em;
     display: block;
     position: relative;
 }
@@ -113,12 +103,13 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-pink);
-    width: 3em;
-    height: 4px;
+    background: var(--clr-white);
+    width: 2em;
+    height: 3px;
     border-radius: 1em;
     transition: 250ms;
 }
+
 
 .hamburger::before,
 .hamburger::after {
@@ -130,3 +121,31 @@ header {
 
 .hamburger::before {top: 10px;}
 .hamburger::after { bottom: 10px;}
+
+@media (min-width: 1024px) {
+    .nav-toggle {
+        display: none;
+    }
+    .nav {
+        background: transparent;
+
+        position: relative;
+        color: var(--clr-blue);
+        top: 0;
+        bottom: 0;
+        Left: 0;
+        right: 0;
+        z-index: 100;
+
+        transform: translateX(0%);
+    }
+
+    .nav__list {
+        display: flex;
+        gap: 25px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+}
