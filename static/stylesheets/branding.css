@@ -23,3 +23,90 @@ html {
 body {
     background-color: #B52555;
 }
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+#about {
+    background-image: url(../assets/branding/background-01.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-color: white;
+    height: 100%;
+    width: 100vw;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.tile {
+    text-align: center;
+    background-color: #d4d6ee ;
+
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.about__img {
+    position: relative;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 80%;
+    border-radius: 10px;
+    padding: 2em 0;
+}
+
+#welcome {
+     background: linear-gradient(
+        var(--clr-blue),
+        #1D4F919d
+    ),
+    url(../assets/branding/pattern-02.webp);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    margin: 0;
+    color: var(--clr-white);
+}
+
+
+@media (min-width: 1024px) {
+    #about {
+        padding: 4em;
+        min-height: calc(100vh - 60px);
+    }
+
+    .about__img {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .tile {
+        padding: 3em;
+        max-width: 400px;  
+        height: 50vh;     
+    }
+}
