@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="static/stylesheets/branding.css">
         <link rel="stylesheet" href="static/stylesheets/typography.css">
         <link rel="stylesheet" href="static/stylesheets/nav.css">
+        <link rel="stylesheet" href="static/stylesheets/slides.css">
 
         <title>Krabz</title>
 
@@ -33,7 +34,34 @@
             </nav>
         </header>
         <main>
+            <section>
+                <div class="slideshow-wrapper">
+                    <div class="slideshow-container">
+                        <div class="slides">
+                            <div id="slide_01" class="slide active">
+                                <img src="static/assets/images/image-01.webp">
+                            </div>
+                            <div id="slide_02" class="slide">
+                                <img src="static/assets/images/image-03.webp">
+                            </div>
+                            <div id="slide_03" class="slide">
+                                <img src="static/assets/images/image-02.webp">
+                            </div>
+                            <div id="slide_04" class="slide">
+                                <img src="static/assets/images/image-04.webp">
+                            </div>
+                            <div id="slide_05" class="slide">
+                                <img src="static/assets/images/image-05.webp">
+                            </div>
+                        </div>
 
+                        <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10093;</a>
+
+                        <div class="overlay"></div>
+                    </div>
+            </section>
+            <section class="temporary-scroll-container"></section>
         </main>
         <footer>
           <small>
@@ -42,5 +70,6 @@
         </footer>
         
         <script src="static/scripts/nav.js"></script>
+        <script src="static/scripts/slides.js"></script>
     </body>
 </html>
