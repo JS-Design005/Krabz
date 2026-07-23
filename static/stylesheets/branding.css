@@ -75,6 +75,16 @@ main {
     flex-grow: 1;
 }
 
+.about-container a {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.about-container a:hover {
+    background-color: #F1B4349d;
+    transform: scale(1.05);
+}
+
 .tile {
     text-align: center;
     background-color: #d4d6ee77 ;
