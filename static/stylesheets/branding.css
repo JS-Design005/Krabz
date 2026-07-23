@@ -18,6 +18,20 @@ html {
 
     --ff-primary:'Soft Mashmallow';
     --ff-secondary: 'Verdana';
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
 }
 
 body {
@@ -32,6 +46,12 @@ main {
     position: relative;
     width: 100%;
     height: calc(100vh - 60px);
+}
+
+.overlay-wrapper-02 {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 #about {
@@ -51,18 +71,16 @@ main {
 .about-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 10px;
     flex-grow: 1;
 }
 
 .tile {
     text-align: center;
-    background-color: #d4d6ee ;
+    background-color: #d4d6ee77 ;
 
     width: 100%;
     height: 100%;
-    padding: 10px;
     border-radius: 30px;
 }
 
@@ -92,10 +110,36 @@ main {
     color: var(--clr-white);
 }
 
+#important-info {
+     background: linear-gradient(
+        var(--clr-yellow),
+        #F1B4349d
+    ),
+    url(../assets/branding/pattern-04.webp);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+   
+}
+
+.content {
+        padding: 1em 2em;
+    }
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: var(--clr-purple);
+    position: relative;
+}
+
 
 @media (min-width: 1024px) {
     #about {
-        padding: 4em;
+        padding: 10em;
         min-height: calc(100vh - 60px);
     }
 
@@ -108,5 +152,25 @@ main {
         padding: 3em;
         max-width: 400px;  
         height: 50vh;     
+    }
+
+    .content {
+        padding: 3em 10em;
+    }
+
+    #important-info {
+        height: calc(100vh - 60px);
+    }
+
+    .overlay-03 {
+        position: absolute;
+        background: url(../assets/branding/background-02.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        bottom: 0;
+        right:0;
+        width: 100%;
+        height: 100%;
     }
 }

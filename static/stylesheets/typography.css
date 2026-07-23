@@ -1,5 +1,6 @@
 /* List styles */
 main ul {
+    margin-top: 0.5em;
     padding-left: 1.5em;
 }
 
@@ -10,4 +11,28 @@ main li {
 
 main li::marker {
     content: "\279c";
+}
+
+h1, h2, h3 {
+    Font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 0.8em;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); margin-bottom: 0.5em; }
+h3 { font-size: var(--fs-h3) }
+
+h2:not(#about h2) { margin-top: 2em; }
+
+@media (min-width: 1024px)  {
+    h2:not(#about h2) {
+        margin-top: 0;
+    }
 }

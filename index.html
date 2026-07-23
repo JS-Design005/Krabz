@@ -36,42 +36,86 @@
         <main>
             <section>
                 <div class="overlay-wrapper">
-                    <div class="slideshow-container">
-                        <div class="slides">
-                            <div id="slide_01" class="slide active">
-                                <img src="static/assets/images/image-01.webp">
-                            </div>
-                            <div id="slide_02" class="slide">
-                                <img src="static/assets/images/image-03.webp">
-                            </div>
-                            <div id="slide_03" class="slide">
-                                <img src="static/assets/images/image-02.webp">
-                            </div>
-                            <div id="slide_04" class="slide">
-                                <img src="static/assets/images/image-04.webp">
-                            </div>
-                            <div id="slide_05" class="slide">
-                                <img src="static/assets/images/image-05.webp">
-                            </div>
+                    <div class="slides">
+                        <div id="slide_01" class="slide active">
+                            <img src="static/assets/images/image-01.webp">
                         </div>
-
-                        <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10093;</a>
-
-                        <!-- The dots/circles -->
-                        <div class="dots">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
+                        <div id="slide_02" class="slide">
+                            <img src="static/assets/images/image-03.webp">
                         </div>
+                        <div id="slide_03" class="slide">
+                            <img src="static/assets/images/image-02.webp">
+                        </div>
+                        <div id="slide_04" class="slide">
+                            <img src="static/assets/images/image-04.webp">
+                        </div>
+                        <div id="slide_05" class="slide">
+                            <img src="static/assets/images/image-05.webp">
+                        </div>
+                    </div>
 
-                        <div class="overlay"></div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10093;</a>
+
+                    <!-- The dots/circles -->
+                    <div class="dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+
+                    <div class="overlay"></div>
+                </div>
+            </section>
+            <section id="about" class="content">
+                   <h1>Krabz!</h1>
+                    <h2 style=" color: var(--clr-purple);">About us</h2>
+                    <div class="about-container">
+                        <div class="tile">
+                            <img src="static/assets/branding/icon-01.webp" class="about__img">
+                            <h3>Friendship</h3>
+                            <p>Every pet you can have in mind, can be a friend of some kind!</p>
+                        </div>
+                        <div class="tile">
+                            <img src="static/assets/branding/icon-02.webp" class="about__img">
+                            <h3>Quality</h3>
+                            <p>We're confident in the reliablility and durablility of our unique products!</p>
+                        </div>
+                        <div class="tile">
+                            <img src="static/assets/branding/icon-03.webp" class="about__img">
+                            <h3>Sustainability</h3>
+                            <p>Everything we do is sustainable to protect wildlife and our planet.</p>
+                        </div>
+                        <div class="tile">
+                            <img src="static/assets/branding/icon-04.webp" class="about__img">
+                            <h3>Care</h3>
+                            <p>Krabooz are exotic pets with very specific care. We are here to guide you!</p>
+                        </div>
                     </div>
             </section>
+            <section id="welcome">
+                <div class="overlay-wrapper content">
+                    <h2>Welcome!</h2>
+                    <p>
+                        Our environmentally sustainable sourced hermit crabs make amazing pets and we are here to provide you with everything you need to take care of them! 
+                        At Krabooz, we value nature and respect which dives us to provide good quality, natural, toxic free products.
+                    </p>
+                    <br>
+                    <h3>Quick start</h3>
+                    <ul>
+                        <li>Prefer not to purchase online? No problem! Pop into your local Petbarn or Petstock!</li>
+                        <li>New to crab keeping? There's loadz of information here to help get you started!</li>
+                        <li>Have specific questionz? We are ready to help!</li>
+                        <li>Want to adopt a Hermit Krabooz? They are available at your nearest Petstock or Petbarn!</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More!</a>
+                    <div class="overlay-02"></div>
+                </div>
+            </section>
             <section id="about">
-                <h1 style="padding-top: 2em; color: var(--clr-purple);">About us</h1>
+                <h2 style="color: var(--clr-purple);">About us</h2>
                 <div class="about-container">
                     <div class="tile">
                         <img src="static/assets/branding/icon-01.webp" class="about__img">
@@ -95,33 +139,38 @@
                     </div>
                 </div>
             </section>
-            <section id="welcome">
-                <div class="overlay-wrapper">
-                    <h1>Welcome!</h1>
-                    <p>
-                        Our environmentally sustainable sourced hermit crabs make amazing pets and we are here to provide you with everything you need to take care of them! 
-                        At Krabooz, we value nature and respect which dives us to provide good quality, natural, toxic free products.
-                    </p>
-                    <br>
-                    <br>
-                    <h3>Quick start</h3>
-                    <ul>
-                        <li>Prefer not to purchase online? No problem! Pop into your local Petbarn or Petstock!</li>
-                        <li>New to crab keeping? There's loadz of information here to help get you started!</li>
-                        <li>Have specific questionz? We are ready to help!</li>
-                        <li>Want to adopt a Hermit Krabooz? They are available at your nearest Petstock or Petbarn!</li>
-                    </ul>
-                    <a href="#" class="btn" style="z-index:99; margin-left:100px; position: relative; ">Shop now!</a>
-                    <div class="overlay-02"></div>
+            <section id="important-info">
+                <div class="overlay-wrapper-02 content">
+                    <h2>One Stop Shop</h2>
+                    <div class="about-container">
+                        <div class="tile">
+                        <img src="static/assets/branding/icon-05.webp" class="about__img">
+                        <h3>Housing</h3>
+                        <p>Being tropical crustacians from north of Australia, your Krabz need a cosy aquarium.</p>
+                    </div>
+                    <div class="tile">
+                        <img src="static/assets/branding/icon-06.webp" class="about__img">
+                        <h3>Shell preferences</h3>
+                        <p>This Aussie species of Krabz need a variety of different shells.</p>
+                    </div>
+                    <div class="tile">
+                        <img src="static/assets/branding/icon-07.webp"class="about__img">
+                        <h3>Health & moulting</h3>
+                        <p>Moulting is the important process of growing, we can tell you all about it!</p>
+                    </div>
+                    <div class="tile">
+                        <img src="static/assets/branding/icon-08.webp" class="about__img">
+                        <h3>Feeding</h3>
+                        <p>Food is very important for the health and colour of your hungary Krabz.</p>
+                    </div>
+                    <div class="overlay-03"></div>
                 </div>
             </section>
         </main>
         <footer>
-          <small>
 
-          </small>
         </footer>
-        
+
         <script src="static/scripts/nav.js"></script>
         <script src="static/scripts/slides.js"></script>
     </body>
