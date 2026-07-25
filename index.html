@@ -19,10 +19,35 @@
     <body>
         <header>
             <img src="static/assets/branding/header-logo.webp" alt="Logo" class="header-logo" oncontextmenu="return false">
+            
+            <!-- Shopping cart inspired by freecodecamp -->
+            <button id="cart-btn" aria-label="Shopping cart">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-shopping-cart"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+                >
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.1 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span id="item-count">2</span>
+            </button>
+
             <!-- Hamburger menu, inspired by a youtube video -->
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
             </button>
+            
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="#">Placeholder</a></li>
@@ -168,6 +193,7 @@
             </section>
         </main>
         <footer>
+            <!-- Social buttons were inspired by the real Krabooz Website -->
             <div class="social-list" >
                 <a class="social-btn" id="youtube-btn" href="#"><img src="static/assets/branding/socials-01.webp" alt="social icon" class="social-icon"></a>
                 <a class="social-btn" id="twitter-btn" href="#"><img src="static/assets/branding/socials-02.webp" alt="social icon" class="social-icon"></a>

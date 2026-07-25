@@ -20,6 +20,55 @@ header {
     z-index: 2000;
 }
 
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#cart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-right: 11px;
+    color: var(--clr-white);
+    z-index: 1000;
+}
+
+#item-count {
+    background: var(--clr-white);
+    color: var(--clr-purple);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 13px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    min-width: 18px;
+    height: 18px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: 700;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.nav-toggle {
+    background: transparent;
+    cursor: pointer;
+    position: fixed;
+    padding: .5em;
+    border: 0;
+    right: 70px;
+
+    z-index: 1000;    
+}
+
 .nav {
     background: linear-gradient(
         var(--clr-purple),
@@ -63,17 +112,6 @@ header {
 
 .nav__list a:active {
     color: var(--clr-white);
-}
-
-.nav-toggle {
-    background: transparent;
-    cursor: pointer;
-    position: absolute;
-    padding: .5em;
-    border: 0;
-    right: 0;
-    margin-right: 1.5em;
-    z-index: 1000;    
 }
 
 .nav-open .nav {
@@ -222,8 +260,6 @@ header {
     transform: translateX(0);
 }
 
-.social-btn:hover { color: var(--clr-blue); }
-
 .social-icon {
     width: 60%;
     margin-left: auto;
@@ -253,6 +289,7 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
+        margin-right: 35px;
     }
 
     .btn {
