@@ -72,9 +72,9 @@ header {
 .nav {
     background: linear-gradient(
         var(--clr-purple),
-        #2e1a479d
+        #1D4F919d
     ),
-    url(../assets/branding/pattern-01.webp);
+    url(../assets/branding/pattern-02.webp);
 
     position: fixed;
     color: var(--clr-blue);
@@ -225,7 +225,7 @@ header {
     width: 40px;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 1;
 }
 
 .social-btn::before {

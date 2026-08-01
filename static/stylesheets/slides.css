@@ -16,7 +16,7 @@
     position: absolute;
     background: url(../assets/branding/background-02.webp);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center bottom;
     bottom: 0;
     right:0;

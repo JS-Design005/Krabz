@@ -108,9 +108,9 @@ main {
 #welcome {
      background: linear-gradient(
         var(--clr-blue),
-        #1D4F919d
+        #B525559d
     ),
-    url(../assets/branding/pattern-02.webp);
+    url(../assets/branding/pattern-03.webp);
     background-repeat: repeat;
     background-attachment: fixed;
     background-position: center bottom;
@@ -141,7 +141,7 @@ main {
 
 footer {
     width: 100%;
-    height: 100px;
+    height: 140px;
     background-color: var(--clr-purple);
     position: relative;
 }

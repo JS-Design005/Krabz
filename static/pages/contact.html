@@ -8,10 +8,11 @@
         <meta property="og:image" content="../assets/branding/favicon.png">
 
         <link rel="icon" type="image/png" href="../assets/branding/favicon.png">
-        <link rel="stylesheet" href="../stylesheets/branding.css">
+        <link rel="stylesheet" href="../stylesheets/global-styles.css">
         <link rel="stylesheet" href="../stylesheets/typography.css">
         <link rel="stylesheet" href="../stylesheets/nav.css">
         <link rel="stylesheet" href="../stylesheets/slides.css">
+        <link rel="stylesheet" href="../stylesheets/contact.css">
 
         <title>Krabz - Contact Us</title>
 
@@ -19,6 +20,29 @@
     <body>
         <header>
             <img src="../assets/branding/header-logo.webp" alt="Logo" class="header-logo" oncontextmenu="return false">
+            <!-- Shopping cart inspired by freecodecamp -->
+            <button id="cart-btn" aria-label="Shopping cart">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-shopping-cart"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+                >
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.1 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span id="item-count">2</span>
+            </button>
+
             <!-- Hamburger menu, inspired by a youtube video -->
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
@@ -34,15 +58,26 @@
             </nav>
         </header>
         <main>
+            <section>
+                <h1>Contact us</h1>
+                <p>Do you have any comments, questions or suggestions? We would be delighted to hear from you!</p>
+                <form action="" id="contact-form">
+                    <input type="text" name="name" id="name" maxlength="30" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" maxlength="30" placeholder="Your Email" required>
+                    <textarea id="message" name="message" maxlength="1000" required placeholder="We are here to help! Type your message here and press send!"></textarea>
 
+                    <button id="submit-btn" type="submit" class="btn">Send</button>
+                </form>
+            </section>
         </main>
         <footer>
             <div class="social-list" >
-                <a class="social-btn" id="youtube-btn" href="#"><img src="static/assets/branding/socials-01.webp" alt="social icon" class="social-icon"></a>
-                <a class="social-btn" id="twitter-btn" href="#"><img src="static/assets/branding/socials-02.webp" alt="social icon" class="social-icon"></a>
-                <a class="social-btn" id="facebook-btn" href="#"><img src="static/assets/branding/socials-03.webp" alt="social icon" class="social-icon"></a>
-                <a class="social-btn" id="instagram" href="#"><img src="static/assets/branding/socials-04.webp" alt="social icon" class="social-icon"></a>
+                <a class="social-btn" id="youtube-btn" href="#"><img src="../assets/branding/socials-01.webp" alt="social icon" class="social-icon"></a>
+                <a class="social-btn" id="twitter-btn" href="#"><img src="../assets/branding/socials-02.webp" alt="social icon" class="social-icon"></a>
+                <a class="social-btn" id="facebook-btn" href="#"><img src="../assets/branding/socials-03.webp" alt="social icon" class="social-icon"></a>
+                <a class="social-btn" id="instagram" href="#"><img src="../assets/branding/socials-04.webp" alt="social icon" class="social-icon"></a>
             </div>
+            <small>*Please Note, this is a folio piece, not a real shopping site or company! &copy; All rights reserved! </small>
         </footer>
 
         <script src="../scripts/nav.js"></script>
