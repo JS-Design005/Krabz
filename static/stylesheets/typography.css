@@ -43,4 +43,9 @@ h2:not(#about h2) { margin-top: 2em; }
     h2:not(#about h2) {
         margin-top: 0;
     }
+
+    article {
+        padding-top: 2em;
+        padding-right: 5vw;
+    }
 }

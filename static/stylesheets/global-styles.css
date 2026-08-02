@@ -42,12 +42,6 @@ main {
     flex-direction: column;
 }
 
-.overlay-wrapper {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 60px);
-}
-
 .overlay-wrapper-02 {
     position: relative;
     width: 100%;
@@ -57,7 +51,7 @@ main {
 #about {
     background-image: url(../assets/branding/background-01.webp);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center bottom;
     background-color: white;
     height: 100%;
@@ -68,19 +62,19 @@ main {
     margin: 0;
 }
 
-.about-container {
+.tile-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     flex-grow: 1;
 }
 
-.about-container a {
+.tile-container a {
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
-.about-container a:hover {
+.tile-container a:hover {
     background-color: #F1B4349d;
     transform: scale(1.05);
 }
@@ -134,10 +128,21 @@ main {
     margin: 0;
    
 }
+.overlay-03 {
+    position: absolute;
+    background: url(../assets/branding/background-02.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+    bottom: 0;
+    right:0;
+    width: 100vw;
+    height: 100%;
+}
 
 .content {
-        padding: 1em 2em;
-    }
+    padding: 1em 2em;
+}
 
 footer {
     width: 100%;
@@ -148,6 +153,11 @@ footer {
 
 
 @media (min-width: 1024px) {
+    .tile-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
     #about {
         padding: 10em;
         min-height: calc(100vh - 60px);

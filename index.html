@@ -62,22 +62,32 @@
             <section>
                 <div class="overlay-wrapper">
                     <div class="slides">
-                        <div id="slide_01" class="slide active">
-                            <img src="static/assets/images/image-01.webp">
-                        </div>
-                        <div id="slide_02" class="slide">
-                            <img src="static/assets/images/image-03.webp">
-                        </div>
-                        <div id="slide_03" class="slide">
-                            <img src="static/assets/images/image-02.webp">
-                        </div>
-                        <div id="slide_04" class="slide">
-                            <img src="static/assets/images/image-04.webp">
-                        </div>
-                        <div id="slide_05" class="slide">
-                            <img src="static/assets/images/image-05.webp">
-                        </div>
+                        <picture id="slide_01" class="slide active">
+                            <source media="(min-width: 1024px)" srcset="static/assets/images/image-01.webp">
+                            <img src="static/assets/images/image-06.webp" alt="" loading="eager">
+                        </picture>
+                        <picture id="slide_02" class="slide">
+                            <source media="(min-width:  768px)" srcset="static/assets/images/image-02.webp">
+
+                            <img src="static/assets/images/image-07.webp" alt="" loading="lazy">
+                        </picture>
+                        <picture id="slide_03" class="slide">
+                            <source media="(min-width: 768px)" srcset="static/assets/images/image-03.webp">
+
+                            <img src="static/assets/images/image-08.webp" alt="" loading="lazy">
+                        </picture>
+                        <picture id="slide_04" class="slide">
+                            <source media="(min-width: 768px)" srcset="static/assets/images/image-04.webp">
+
+                            <img src="static/assets/images/image-09.webp" alt="" loading="lazy">
+                        </picture>
+                        <picture id="slide_05" class="slide">
+                            <source media="(min-width: 768px)" srcset="static/assets/images/image-05.webp">
+
+                            <img src="static/assets/images/image-10.webp" alt="" loading="lazy">
+                        </picture>
                     </div>
+                    <div class="overlay"></div>
 
                     <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
                     <a class="next" onclick="plusSlides(1)">&#10093;</a>
@@ -91,13 +101,13 @@
                         <span class="dot" onclick="currentSlide(5)"></span>
                     </div>
 
-                    <div class="overlay"></div>
+                    
                 </div>
             </section>
             <section id="about" class="content">
                    <h1>Krabz!</h1>
                     <h2>About us</h2>
-                    <div class="about-container">
+                    <div class="tile-container">
                         <div class="tile">
                             <img src="static/assets/branding/icon-01.webp" class="about__img">
                             <h3>Friendship</h3>
@@ -122,7 +132,8 @@
             </section>
             <section id="welcome">
                 <div class="overlay-wrapper content">
-                    <h2>Welcome!</h2>
+                    <article>
+                        <h2>Welcome!</h2>
                     <p>
                         Our environmentally sustainable sourced hermit crabs make amazing pets and we are here to provide you with everything you need to take care of them! 
                         At Krabooz, we value nature and respect which dives us to provide good quality, natural, toxic free products.
@@ -135,13 +146,15 @@
                         <li>Have specific questionz? We are ready to help!</li>
                         <li>Want to adopt a Hermit Krabooz? They are available at your nearest Petstock or Petbarn!</li>
                     </ul>
+                    </article>
+                    
                     <a href="#" class="btn">Learn More!</a>
                     <div class="overlay-02"></div>
                 </div>
             </section>
             <section id="about">
                 <h2>Essentials</h2>
-                <div class="about-container">
+                <div class="tile-container">
                     <a class="tile">
                         <img src="static/assets/images/product-01.webp" class="about__img">
                         <h3>Water Bowls</h3>
@@ -167,7 +180,7 @@
             <section id="important-info">
                 <div class="overlay-wrapper-02 content">
                     <h2>One Stop Shop</h2>
-                    <div class="about-container">
+                    <div class="tile-container">
                         <div class="tile">
                         <img src="static/assets/branding/icon-05.webp" class="about__img">
                         <h3>Housing</h3>
@@ -188,8 +201,9 @@
                         <h3>Feeding</h3>
                         <p>Food is very important for the health and colour of your hungary Krabz.</p>
                     </div>
-                    <div class="overlay-03"></div>
+                    
                 </div>
+                <div class="overlay-03"></div>
             </section>
         </main>
         <footer>
@@ -200,6 +214,7 @@
                 <a class="social-btn" id="facebook-btn" href="#"><img src="static/assets/branding/socials-03.webp" alt="social icon" class="social-icon"></a>
                 <a class="social-btn" id="instagram" href="#"><img src="static/assets/branding/socials-04.webp" alt="social icon" class="social-icon"></a>
             </div>
+            <small>*Please Note, this is a folio piece, not a real shopping site or company! &copy; All rights reserved! </small>
         </footer>
 
         <script src="static/scripts/nav.js"></script>
