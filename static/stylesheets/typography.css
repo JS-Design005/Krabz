@@ -1,15 +1,15 @@
 /* List styles */
-main ul {
+article ul {
     margin-top: 0.5em;
     padding-left: 1.5em;
 }
 
-main li {
+article li {
     padding-left: 10px;
     padding-bottom: 8px;
 }
 
-main li::marker {
+article li::marker {
     content: "\279c";
 }
 

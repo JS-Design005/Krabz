@@ -1,0 +1,81 @@
+main {
+    background-color: white;
+    padding: 5em 2em 0em;
+}
+
+section {
+    margin-bottom: 5em;
+}
+
+.suggested {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+    padding: 1em 0 ;
+    margin-bottom: 1em;
+    overflow-x: auto;
+    width: 100%;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    -ms-overflow-style: none; /* Hide scrollbar from IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar from Firefox */
+}
+
+.suggested::-webkit-scrollbar {
+    display: none; /* Hide scrollbar from Chrome, Safari and Opera */
+}
+
+.btn {
+    min-width: 7em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-tile {
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 1em;
+
+    background-color: #d4d6ee77 ;
+}
+
+.gallery a {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery a:hover {
+    background-color: #F1B4349d;
+    transform: scale(1.05);
+}
+
+.gallery a:active {
+    background-color: transparent;
+    transform: scale(1.05);
+}
+@media (min-width: 1024px) {
+    section {
+        min-width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5em;
+        padding-top: 2em;
+    }
+
+    .btn {
+        min-width: 9em;
+    }
+
+    .suggested {
+        width: fit-content;
+    }
+}

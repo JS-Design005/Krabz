@@ -66,13 +66,14 @@ input[type="text"]:focus, input[type="email"]:focus , textarea:focus {
 @media (min-width: 1024px) {
     #contact-form {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content:space-between;
         flex: 1;
     }
 
     #name, #email {
-        width: calc(50% - 50px);
+        width: calc(50% - 5px);
         height: 50px;
         padding: 12px;
     }

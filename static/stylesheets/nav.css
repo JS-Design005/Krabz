@@ -266,6 +266,22 @@ header {
     margin-right: auto;
 }
 
+.breadcrumbs ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none !important;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: calibri, sans-serif;
+    font-size: 0.9rem;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: ">";
+    margin: 0 10px;
+    pointer-events: none;
+}
+
 @media (min-width: 1024px) {
     .nav-toggle {
         display: none;
