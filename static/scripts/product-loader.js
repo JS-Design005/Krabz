@@ -2,6 +2,16 @@
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 
+// Set up DOM Elements
+const cartCountElement = document.getElementById('item-count');
+const addToCartButton = document.getElementById('add-to-cart-btn');
+
+// Find the number of items in the cart and update badge number
+let currentCartCount = parseInt(localStorage.getItem('cartItemsCount')) || 0;
+if (cartCountElement) {
+    cartCountElement.innerText = currentCartCount;
+}
+
 // Fetch JSON data file
 fetch('../data/products.json')
     .then(res => {
@@ -28,7 +38,7 @@ fetch('../data/products.json')
             const reviewsContainer = document.getElementById('reviews-container');
             reviewsContainer.innerHTML =''; // clears our placeholder text
 
-            if(currentProduct.reviews && currentProduct.reviews.length > 0) {
+            if (currentProduct.reviews && currentProduct.reviews.length > 0) {
                 currentProduct.reviews.forEach(review => {
                     const reviewDiv = document.createElement('div');
                     reviewDiv.className = 'review-card';
@@ -46,6 +56,24 @@ fetch('../data/products.json')
             } else {
                 reviewsContainer.innerText = "No reviews for this product yet.";
             }
+
+            // Cart Button
+            if (addToCartButton) {
+                addToCartButton.addEventListener('click', () => {
+                    // update badge
+                    currentCartCount++;
+                    if (cartCountElement) cartCountElement.innerText = currentCartCount;
+                    localStorage.setItem('cartItemsCount', currentCartCount);
+
+                    // Save actual Product ID
+                    let cartList = JSON.parse(localStorage.getItem('cartList')) || [];
+                    cartList.push(productId);
+                    localStorage.setItem('cartList', JSON.stringify(cartList));
+
+                    alert(`${currentProduct.name} added to cart!`);
+                });
+            }
+            
         } else {
             // Error handling
             document.getElementById('product-title').innerText = "Product not found!"
