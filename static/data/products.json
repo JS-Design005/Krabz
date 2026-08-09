@@ -1,0 +1,27 @@
+[
+    {
+        "id": "water-bowls",
+        "breadcrumb": "Water Bowls",
+        "name": "Water Bowls",
+        "price": "$10.00",
+        "image": "../assets/images/product-01.webp",
+        "description": "Waterbowl in the shape of a lifering, perfect for medium to smaller crabs. Comes in four colours, made with safe non-toxic paint. Smooth surface for easy cleaning, and the bowl has a heavy design to prevent the Krabz from tipping it over.",
+        "reviews": [
+            {
+                "reviewer": "Alex S.",
+                "rating": "★★★☆☆",
+                "comment": "Great for childrens setups, but look strange if you want a more natural setup."
+            },
+            {
+                "reviewer": "Kelly H.",
+                "rating": "★★★★★",
+                "comment": "Cute design, strong and the kids love watching the crabs bathe in them!"
+            },
+            {
+                "reviewer": "Mary J.",
+                "rating": "★☆☆☆☆",
+                "comment": "They are too small for jumbo crabs and the paint chips off easily. They are also childish in design, and ruin natural setups."
+            }
+        ]
+    }
+]

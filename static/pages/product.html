@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="../stylesheets/nav.css">
         <link rel="stylesheet" href="../stylesheets/shop.css">
 
-        <title>Krabz - Contact Us</title>
+        <title>Krabz - Shop</title>
 
     </head>
     <body>
@@ -61,52 +61,30 @@
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
                     <ul>
                         <li><a href="../../index.html">Home</a></li>
-                        <li aria-current="page">Shop</li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li aria-current="page" id="breadcrumb"></li>
                     </ul>
                 </nav>
-                <h1>Shop</h1>
-                <nav class="suggested">
-                    <a href="" class="btn">Housing</a>
-                    <a href="" class="btn">Decor</a>
-                    <a href="" class="btn">Food</a>
-                    <a href="" class="btn">Shells</a>
-                </nav>
-                <div class="gallery">
-                    <!-- These links need to work static so I am trying to use the URL Parameter method -->
-                    <a href="product.html?id=water-bowls" class="gallery-tile">
-                        <img src="../assets/images/product-01.webp" class="gallery__img">
-                        <h3>Water Bowls</h3>
-                    </a>
-                    <a class="gallery-tile">
-                        <img src="../assets/images/product-02.webp" class="gallery__img">
-                        <h3>Shells</h3>
-                    </a>
-                    <a class="gallery-tile">
-                        <img src="../assets/images/product-03.webp" class="gallery__img">
-                        <h3>Food Bowls</h3>
-                    </a>
-                    <a class="gallery-tile">
-                        <img src="../assets/images/product-04.webp" class="gallery__img">
-                        <h3>Food</h3>
-                    </a>
-                    <a class="gallery-tile">
-                        <img src="../assets/images/product-01.webp" class="gallery__img">
-                        <h3>Water Bowls</h3>
-                    </a>
-                    <a class="gallery-tile">
-                        <img src="../assets/images/product-02.webp" class="gallery__img">
-                        <h3>Shells</h3>
-                    </a>
-                    <a class="gallery-tile">
-                        <img src="../assets/images/product-03.webp" class="gallery__img">
-                        <h3>Food Bowls</h3>
-                    </a>
-                    <a class="gallery-tile">
-                        <img src="../assets/images/product-04.webp" class="gallery__img">
-                        <h3>Food</h3>
-                    </a>
+                <div class="info-container">
+                    <div class="product-info">
+                        <h1 id="product-title">Loading Product...</h1>
+                        <div class="product-img-container">
+                            <img id="product-img" src="" alt="">
+                        </div>
+                        <h2 id="product-price"></h2>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                    <div class="product-data">
+                        <article class="desc">
+                            <h3>Description</h3>
+                            <p id="product-desc"></p>
+                        </article>
+                        <article>
+                            <h3>Reviews</h3>
+                            <div id="reviews-container">No reviews yet.</div>
+                        </article>
+                    </div>
                 </div>
-                <div class="overlay"></div>
             </section>
         </main>
         <footer>
@@ -120,5 +98,6 @@
         </footer>
 
         <script src="../scripts/nav.js"></script>
+        <script src="../scripts/product-loader.js"></script>
     </body>
 </html>
