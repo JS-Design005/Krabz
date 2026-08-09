@@ -49,6 +49,8 @@ fetch('../data/products.json')
         } else {
             // Error handling
             document.getElementById('product-title').innerText = "Product not found!"
+            document.getElementById('product-desc').innerText = "No description available."
+            document.getElementById('breadcrumb').innerText = "Unknown Product";
         }
     })
     .catch(error => {

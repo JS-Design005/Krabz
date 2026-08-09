@@ -23,5 +23,59 @@
                 "comment": "They are too small for jumbo crabs and the paint chips off easily. They are also childish in design, and ruin natural setups."
             }
         ]
+    },
+    {
+        "id": "shells",
+        "breadcrumb": "Shells",
+        "name": "Shells",
+        "price": "$5.50",
+        "image": "../assets/images/product-02.webp",
+        "description": "Aussie Krabz prefer the oval and D shapped openings. Some Aussie Krabz like cirle ones, but this is rare. We have a wide range of shell choices, and we recomend natural shells. ",
+        "reviews": [
+            {
+                "reviewer": "Holly J.",
+                "rating": "★★★☆☆",
+                "comment": "The shells were all so small. I think it would be better if we could choose the sizes, but appart from that, they were pretty good."
+            },
+            {
+                "reviewer": "Tom E.",
+                "rating": "★★★★★",
+                "comment": "Fast delivery, and varied shells. I have happy crabs, thanks guys!"
+            },
+            {
+                "reviewer": "Sarah C.",
+                "rating": "★☆☆☆☆",
+                "comment": "if i could, i would give 0 stars! Seriously, how hard is it to allow customers to choose the colours and types of shells? and for over five bucks too, get out of here! I will be returning to the 2 dollar craft shop for my shells, which come in mixed bags, of 10 for 5 bucks instead! thanks for nothing"
+            }
+        ]
+    },
+    {
+        "id": "salt-pool",
+        "breadcrumb": "Salt Pools",
+        "name": "Salt Pools",
+        "price": "$10.50",
+        "image": "../assets/images/product-03.webp",
+        "description": "These salt pools are perfect size for small medium and large crabs, featuring steps to make climbing out easier and safer. Coming in 4 different colours, with a solid, heavy design - no need to worry about the Krabz tipping all the water out!",
+        "reviews": [
+            {
+                "reviewer": "Pete C.",
+                "rating": "★☆☆☆☆",
+                "comment": "Don't buy this! The paint peels off after a few months, and the crabs might eat the paint. Dissapointed."
+            },
+            {
+                "reviewer": "Emma F.",
+                "rating": "★★★★★",
+                "comment": "Finaly I have a water bowl that my crabs can't tip over! Love the colours too, so cute!"
+            }
+        ]
+    },
+        {
+        "id": "food",
+        "breadcrumb": "Food",
+        "name": "Munchiez",
+        "price": "$8.99",
+        "image": "../assets/images/product-04.webp",
+        "description": "A varied mix of dried foods including mealworms, seeds, dried shimp, dried fruits and dried flowers. Perfect for a varied diet for your Krabz to be healthy and srtong, please feed along with plenty of fresh fruits and veggies!",
+        "reviews": []
     }
 ]

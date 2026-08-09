@@ -107,7 +107,7 @@ hr {
 @media (min-width: 1024px) {
     section {
         min-height: calc(100vh - 300px);
-        min-width: 80vw;
+        width: 80vw;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 5em;
