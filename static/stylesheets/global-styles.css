@@ -151,7 +151,16 @@ footer {
     position: relative;
 }
 
+.article-content {
+    background-color: white;
+}
 
+.article-content article {
+    padding: 2em;
+}
+.care-guide-welcome article {
+    padding-top:8em;
+}
 @media (min-width: 1024px) {
     .tile-container {
         display: grid;
@@ -192,5 +201,12 @@ footer {
         right:0;
         width: 100%;
         height: 100%;
+    }
+
+    .article-content article {
+        padding: 10em 10em 0;
+    }
+    .care-guide-welcome article {
+        padding-top: 3em;
     }
 }

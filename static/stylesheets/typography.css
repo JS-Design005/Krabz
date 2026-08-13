@@ -29,6 +29,8 @@ h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); margin-bottom: 0.5em; }
 h3 { font-size: var(--fs-h3); margin-bottom: 0.5em; }
 
+p { margin-bottom: 0.6em; }
+
 small {
     position: absolute;
     bottom: 5px;
@@ -38,6 +40,10 @@ small {
 }
 
 h2:not(#about h2) { margin-top: 2em; }
+
+.purple {
+    color: var(--clr-purple);
+}
 
 @media (min-width: 1024px)  {
     h2:not(#about h2) {
