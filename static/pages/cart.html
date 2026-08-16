@@ -68,12 +68,12 @@
                 <div class="info-container">
                     <div class="product-info">
                         <h1>Your Order</h1>
-                        <div class="cart-items"></div>
+                        <div class="cart-container"></div>
                     </div>
                     <form id="payment-form" class="desc">
                         <h3>Mock Checkout</h3>
-                        <p>Total items: <span id="checkout-count">0</span></p>
-                        <p>Total Price: <span id="checkout-price">0</span></p>
+                        <p>Total Items: <span id="checkout-count">0</span></p>
+                        <p>Total Price: <span id="cart-total">$0.00</span></p>
 
                         <label for="user-name">Full Name:</label>
                         <input type="text" id="user-name" placeholder="e.g. John Smith" required>
@@ -91,7 +91,7 @@
                     </form>
 
                     <!-- Hidden Payment Success Message! -->
-                    <div id="sucess-message" style="display: none;">
+                    <div id="success-message" style="display: none;">
                         Payment complete! Thank you for shopping with us! 
                     </div>
                 </div>
@@ -107,8 +107,8 @@
             <small>*Please Note, this is a folio piece, not a real shopping site or company! This form is a mock form, no orders will be placed! Please do not use real details on this form. &copy; All rights reserved! Website and branding by Jojo Smith 2026.</small>
         </footer>
 
+        <script src="../scripts/global-manager.js"></script>
         <script src="../scripts/nav.js"></script>
-        <script src="../scripts/product-loader.js"></script>
-        <script src="../scripts/cart-manager.js"></script>
+        <script src="../scripts/cart-page-manager.js"></script>
     </body>
 </html>

@@ -3,14 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 
 // Set up DOM Elements
-const cartCountElement = document.getElementById('item-count');
 const addToCartButton = document.getElementById('add-to-cart-btn');
-
-// Find the number of items in the cart and update badge number
-let currentCartCount = parseInt(localStorage.getItem('cartItemsCount')) || 0;
-if (cartCountElement) {
-    cartCountElement.innerText = currentCartCount;
-}
 
 // Fetch JSON data file
 fetch('../data/products.json')
@@ -24,10 +17,10 @@ fetch('../data/products.json')
 
         // inject data into the template page
         if (currentProduct) {
-            // Inject data
+            // Inject data (Added the '$' here visually for your clean numbers!)
             document.getElementById('breadcrumb').innerText = currentProduct.breadcrumb;
             document.getElementById('product-title').innerText = currentProduct.name;
-            document.getElementById('product-price').innerText = currentProduct.price;
+            document.getElementById('product-price').innerText = `$${parseFloat(currentProduct.price).toFixed(2)}`;
             document.getElementById('product-desc').innerText = currentProduct.description;
 
             // Inject image
@@ -36,14 +29,13 @@ fetch('../data/products.json')
 
             // Inject review data
             const reviewsContainer = document.getElementById('reviews-container');
-            reviewsContainer.innerHTML =''; // clears our placeholder text
+            reviewsContainer.innerHTML = ''; // clears our placeholder text
 
             if (currentProduct.reviews && currentProduct.reviews.length > 0) {
                 currentProduct.reviews.forEach(review => {
                     const reviewDiv = document.createElement('div');
                     reviewDiv.className = 'review-card';
 
-                    // wrapping star rating together
                     reviewDiv.innerHTML = `
                     <p><span class="review-name">${review.reviewer}</span></p>
                     <p class="star-rating">${review.rating}</p>
@@ -60,15 +52,15 @@ fetch('../data/products.json')
             // Cart Button
             if (addToCartButton) {
                 addToCartButton.addEventListener('click', () => {
-                    // update badge
-                    currentCartCount++;
-                    if (cartCountElement) cartCountElement.innerText = currentCartCount;
-                    localStorage.setItem('cartItemsCount', currentCartCount);
-
-                    // Save actual Product ID
+                    // 1. Save the actual Product ID into your array box
                     let cartList = JSON.parse(localStorage.getItem('cartList')) || [];
                     cartList.push(productId);
                     localStorage.setItem('cartList', JSON.stringify(cartList));
+
+                    // 2. Call the function inside your global-manager.js to update the badge instantly!
+                    if (typeof updateGlobalCartBadge === 'function') {
+                        updateGlobalCartBadge();
+                    }
 
                     alert(`${currentProduct.name} added to cart!`);
                 });
