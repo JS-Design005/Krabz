@@ -71,6 +71,8 @@ main {
 
 .tile-container a {
     cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-black);
     transition: 0.3s ease-in-out;
 }
 

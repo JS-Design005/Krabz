@@ -1,0 +1,26 @@
+input:invalid, 
+select:invalid,
+textarea:invalid {
+  border: 1px solid var(--clr-yellow);
+  outline: none;
+}
+
+input:valid, 
+select:valid,
+textarea:valid {
+  border: 1px solid var(--clr-blue);
+  outline: none;
+}
+
+input {
+  border-radius: 30px;
+}
+
+input[type="text"], input[type="email"] {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+

@@ -15,6 +15,7 @@
     right:0;
     width: 100vw;
     height: 100%;
+    z-index: 2;
 }
 
 .overlay-02 {
@@ -27,36 +28,55 @@
     right:0;
     width: 100vw;
     height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    position: relative;
+    width: 100%;
+    /* Keeps your responsive height calculation intact */
+    height: calc(100vh - 60px); 
 }
 
+/* Base style for every slide */
 .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
+    
+    /* FIX: Keep slide structure alive, but use opacity for smooth fades */
     display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
-    overflow: hidden;
+    
+    opacity: 0;
+    /* Keeps it unclickable while invisible */
+    visibility: hidden; 
+    
+    /* Slower fade speed (1.2 seconds) to look luxurious and smooth */
+    transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
+    z-index: -1;
 }
 
-.slide img, .slide {
-    margin: auto;
-    max-height: calc(100vh - 60px);
-}
-
-.slide:not(.active) {
-    display: none;
-}
-
+/* Smoothly activate the visible slide */
 .slide.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
 }
 
+/* Ensure images fill the responsive container perfectly */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* Your original arrow alignment looks fantastic, kept exactly as is! */
 .prev, 
 .next {
     cursor: pointer;
@@ -68,62 +88,19 @@
     font-size: 100px;
     transition: 0.4s ease;
     user-select: none;
-    z-index: 1;
+    z-index: 10; /* Boosted z-index to sit perfectly on top of the fading images */
 }
 
 .next {
     right: 0;
-  }
+}
 
 .prev:hover,
 .next:hover {
-  color: rgba(255, 102, 153, 0.5);
-}
-
-
-/* The dots/bullets/indicators */
-.dots {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    bottom: 5em;
-    z-index: 1;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color:#2E1A47ab;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot:hover {
-    background-color: #c5c5c5;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    color: rgba(255, 102, 153, 0.5);
 }
 
 @media (min-width: 1024px)  {
-      .dot {
-        background-color:white;
-    }
-    
-    .dot:hover {
-        background-color: #7e7e7e;
-    }
     .overlay-wrapper{
         object-fit: cover;
         object-position: left center;

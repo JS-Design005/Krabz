@@ -58,9 +58,11 @@ input[type="text"]:focus, input[type="email"]:focus , textarea:focus {
     flex-direction: column;
     gap: 10px;
 }
+
 #submit-btn {
     background: transparent;
     width: 100%;
+    color: var(--clr-white);
 }
 
 @media (min-width: 1024px) {
