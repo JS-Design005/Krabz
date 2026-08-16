@@ -49,21 +49,54 @@ fetch('../data/products.json')
                 reviewsContainer.innerText = "No reviews for this product yet.";
             }
 
-            // Cart Button
-            if (addToCartButton) {
-                addToCartButton.addEventListener('click', () => {
-                    // 1. Save the actual Product ID into your array box
-                    let cartList = JSON.parse(localStorage.getItem('cartList')) || [];
-                    cartList.push(productId);
-                    localStorage.setItem('cartList', JSON.stringify(cartList));
+            // --- NEW: IN-STORE ONLY BOOLEAN CHECK ---
+ if (currentProduct.inStoreOnly === true) {
+                // PATH 1: Handle Live Animals
+                if (addToCartButton) {
+                    addToCartButton.style.display = 'none';
+                    
+                    const parentContainer = addToCartButton.parentElement;
+                    const storeNotice = document.createElement('div');
+                    storeNotice.className = 'in-store-notice';
+                    storeNotice.innerHTML = `
+                        <p><strong>In-Store Only Adoption</strong></p>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">To keep our live Krabz healthy and safe, they cannot be shipped. Please visit your local Petstock branch to adopt!</p>
+                    `;
+                    parentContainer.appendChild(storeNotice);
+                }
+            } 
+            else if (currentProduct.outOfStock === true) {
+                // PATH 2: Handle Out of Stock Items (Fixed with 'else if')
+                if (addToCartButton) {
+                    addToCartButton.style.display = 'none';
+                    
+                    const parentContainer = addToCartButton.parentElement;
+                    const stockNotice = document.createElement('div');
+                    stockNotice.className = 'out-of-stock-notice'; // Gave this its own class name for custom CSS styling!
+                    stockNotice.innerHTML = `
+                        <p><strong>Out of Stock!</strong></p>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Don't worry! We expect to have more of this product back in stock soon!</p>
+                    `;
+                    parentContainer.appendChild(stockNotice);
+                }
+            } 
+            else {
+                // PATH 3: Normal Add to Cart Button Logic for shippable stock items
+                if (addToCartButton) {
+                    addToCartButton.style.display = 'block'; 
+                    
+                    addToCartButton.addEventListener('click', () => {
+                        let cartList = JSON.parse(localStorage.getItem('cartList')) || [];
+                        cartList.push(productId);
+                        localStorage.setItem('cartList', JSON.stringify(cartList));
 
-                    // 2. Call the function inside your global-manager.js to update the badge instantly!
-                    if (typeof updateGlobalCartBadge === 'function') {
-                        updateGlobalCartBadge();
-                    }
+                        if (typeof updateGlobalCartBadge === 'function') {
+                            updateGlobalCartBadge();
+                        }
 
-                    alert(`${currentProduct.name} added to cart!`);
-                });
+                        alert(`${currentProduct.name} added to cart!`);
+                    });
+                }
             }
             
         } else {

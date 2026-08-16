@@ -197,7 +197,7 @@ header {
 
 /* white pink button */
 .white { border: 2px solid var(--clr-white); color: var(--clr-white); }
-.white::before  { border: 2px solid var(--clr-white); color: var(--clr-white); }
+.white::before  { border: 2px solid var(--clr-white); background-color: var(--clr-white); }
 .txt-pink:hover, #submit-btn:hover { color: var(--clr-pink); }
 
 /* Gray buttons #d4d6ee77 */

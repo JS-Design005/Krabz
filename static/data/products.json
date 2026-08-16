@@ -74,8 +74,31 @@
         "breadcrumb": "Food",
         "name": "Munchiez",
         "price": "8.99",
+        "outOfStock": true,
         "image": "../assets/images/product-04.webp",
         "description": "A varied mix of dried foods including mealworms, seeds, dried shimp, dried fruits and dried flowers. Perfect for a varied diet for your Krabz to be healthy and srtong, please feed along with plenty of fresh fruits and veggies!",
         "reviews": []
+    },
+    {
+        "id": "hermit-crab",
+        "breadcrumb": "Live Krabz",
+        "name": "Aussie Land Hermit Crab",
+        "price": "15.00",
+        "image": "../assets/images/product-01.webp",
+        "description": "Healthy, active native land hermit crabs. Please note: To ensure the safety of our livestock, live crabs cannot be shipped and must be adopted in-store.",
+        "inStoreOnly": true,
+        "reviews": [
+            {
+                "reviewer": "Pete C.",
+                "rating": "★☆☆☆☆",
+                "comment": "Don't buy this! The paint peels off after a few months, and the crabs might eat the paint. Dissapointed."
+            },
+            {
+                "reviewer": "Emma F.",
+                "rating": "★★★★★",
+                "comment": "Finaly I have a water bowl that my crabs can't tip over! Love the colours too, so cute!"
+            }
+        ]
     }
+
 ]
