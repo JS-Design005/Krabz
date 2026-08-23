@@ -69,7 +69,7 @@
             }
         ]
     },
-        {
+    {
         "id": "food",
         "breadcrumb": "Food",
         "name": "Munchiez",
@@ -84,19 +84,58 @@
         "breadcrumb": "Live Krabz",
         "name": "Aussie Land Hermit Crab",
         "price": "15.00",
-        "image": "../assets/images/product-01.webp",
+        "image": "../assets/images/product-08.webp",
         "description": "Healthy, active native land hermit crabs. Please note: To ensure the safety of our livestock, live crabs cannot be shipped and must be adopted in-store.",
         "inStoreOnly": true,
         "reviews": [
             {
                 "reviewer": "Pete C.",
                 "rating": "★☆☆☆☆",
-                "comment": "Don't buy this! The paint peels off after a few months, and the crabs might eat the paint. Dissapointed."
+                "comment": "These crabs die so easily, definately not a beginner friendly pet."
             },
             {
                 "reviewer": "Emma F.",
                 "rating": "★★★★★",
-                "comment": "Finaly I have a water bowl that my crabs can't tip over! Love the colours too, so cute!"
+                "comment": "Soo cute, the kids love them! Low maintainance, fun to watch and a good pet for beginners."
+            }
+        ]
+    },
+    {
+        "id": "driftwood",
+        "breadcrumb": "Driftwood",
+        "name": "Driftwood",
+        "price": "24.99",
+        "image": "../assets/images/product-06.webp",
+        "description": "Beautiful natural piece of driftwood for aquarium decor, sourced sustainably (pieces vary) and cured with salt to protect from mould.",
+        "reviews": []
+    },
+    {
+        "id": "sand",
+        "breadcrumb": "Sand",
+        "name": "5kg Sand",
+        "price": "7.00",
+        "image": "../assets/images/product-05.webp",
+        "description": "Sand is the perfect substrate for your krabz to easily dig in the sand!",
+        "reviews": [
+            {
+                "reviewer": "Pete C.",
+                "rating": "★★★★☆",
+                "comment": "A little expensive, but cheaper than other brands. Sand is nice, and the best part is it isnt dyed."
+            }
+        ]
+    },
+    {
+        "id": "starter-bundle",
+        "breadcrumb": "Starter Bundle",
+        "name": "Starter Bundle",
+        "price": "34.99",
+        "image": "../assets/images/product-07.webp",
+        "description": "Get everything at once in a cheap bundle!",
+        "reviews": [
+            {
+                "reviewer": "Pete C.",
+                "rating": "★★★★☆",
+                "comment": "A little expensive, but cheaper than other brands. Sand is nice, and the best part is it isnt dyed."
             }
         ]
     }

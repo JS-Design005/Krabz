@@ -104,6 +104,11 @@ hr {
 .review-card {
     margin-bottom: 1em;
 }
+
+.remove-btn {
+    background-color: red;
+}
+
 @media (min-width: 1024px) {
     section {
         min-height: calc(100vh - 300px);
