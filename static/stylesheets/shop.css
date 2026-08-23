@@ -105,8 +105,32 @@ hr {
     margin-bottom: 1em;
 }
 
+.item-info {
+    margin-top: 1.5em;
+}
+
+.item-img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .remove-btn {
-    background-color: red;
+    border: 1px solid var(--clr-yellow);
+    background-color: transparent;
+    color: var(--clr-yellow);
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+.remove-btn:hover {
+    background-color: var(--clr-yellow);
+    color: white;
+}
+.remove-btn:active {
+    background-color: transparent;
+    color: var(--clr-yellow);
+
 }
 
 @media (min-width: 1024px) {

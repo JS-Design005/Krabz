@@ -37,12 +37,15 @@ function renderCartPage() {
                     
                     // We attach a data-index to the button so it remembers its position
                     itemDiv.innerHTML = `
-                        <img src="${product.image}" alt="${product.name}" style="width: 100px;">
-                        <div class="item-info">
-                            <span>${product.name}</span>
+                        
+
+                        <img class="item-img" src="${product.image}" alt="${product.name}">
+                    <div class="item-info">
+                            <span><b>${product.name}</b></span>
                             <span>$${parseFloat(product.price).toFixed(2)}</span>
+                            <button class="remove-btn" data-index="${index}">Remove</button>
                         </div>
-                        <button class="remove-btn" data-index="${index}">Remove</button>
+                        
                         <hr class="review-divider"> 
                     `;
                     container.appendChild(itemDiv);
