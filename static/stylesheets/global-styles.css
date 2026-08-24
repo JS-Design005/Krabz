@@ -16,13 +16,26 @@ html {
     --clr-white: #dcdbdf;
     --clr-black: #112;
 
-    --ff-primary:'Soft Mashmallow';
-    --ff-secondary: 'Verdana';
+    --ff-primary:'Sour Gummy';
+    --ff-secondary: 'Quicksand';
     
     --fs-h1: 3rem;
     --fs-h2: 2.5rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+}
+
+.sour-gummy {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @media (min-width: 800px) {
@@ -41,6 +54,8 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+
 
 .overlay-wrapper-02 {
     position: relative;
@@ -212,3 +227,59 @@ footer {
         padding-top: 3em;
     }
 }
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; 
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1em;
+  border: 8px solid #f3f3f3; 
+  border-radius: 50%; 
+  /* Link our new multi-colour animation */
+  animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+  /* 0% Start: Blue */
+  0% {
+    transform: rotate(0deg);
+    border-top-color: var(--clr-blue);
+  }
+  /* 25%: Purple */
+  25% {
+    border-top-color: var(--clr-pink); 
+  }
+  /* 50%: Pink */
+  50% {
+    border-top-color: var(--clr-purple); 
+  }
+  /* 75%: Yellow */
+  75% {
+    border-top-color: var(--clr-yellow);
+  }
+  /* 100% End: Loops smoothly back to Blue */
+  100% {
+    transform: rotate(360deg);
+    border-top-color: var(--clr-blue); 
+  }
+}
+

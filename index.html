@@ -7,6 +7,11 @@
         <meta name="description" content="Krabz is your go to for all you hermit crab pet supply needs! Check out our range of stock and advice to keep your hermies healthy and happy!">
         <meta property="og:image" content="static/assets/branding/favicon.png">
 
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
         <link rel="icon" type="image/png" href="static/assets/branding/favicon.png">
         <link rel="stylesheet" href="static/stylesheets/global-styles.css">
         <link rel="stylesheet" href="static/stylesheets/typography.css">
@@ -17,6 +22,11 @@
 
     </head>
     <body>
+        <div id="loader-wrapper">
+            <div class="spinner"></div>
+            <p class="loading-text">Just a moment...</p>
+        </div>
+
         <header>
             <img src="static/assets/branding/header-logo.webp" alt="Logo" class="header-logo" oncontextmenu="return false">
             
@@ -210,5 +220,6 @@
         <script src="static/scripts/nav.js"></script>
         <script src="static/scripts/slides.js"></script>
         <script src="static/scripts/global-manager.js"></script>
+        <script src="static/scripts/preloader.js"></script>
     </body>
 </html>                    
