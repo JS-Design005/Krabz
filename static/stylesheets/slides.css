@@ -47,7 +47,7 @@
     width: 100%;
     height: 100%;
     
-    /* FIX: Keep slide structure alive, but use opacity for smooth fades */
+    /* Keep slide structure alive, but use opacity for smooth fades */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +88,7 @@
     font-size: 100px;
     transition: 0.4s ease;
     user-select: none;
-    z-index: 10; /* Boosted z-index to sit perfectly on top of the fading images */
+    z-index: 2; /* Boosted z-index to sit perfectly on top of the fading images */
 }
 
 .next {
@@ -108,7 +108,6 @@
     .slide img, .slide {
         margin: auto;
         min-height: calc(100vh - 60px);
-        
     }
 
 }

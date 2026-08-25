@@ -20,7 +20,7 @@ html {
     --ff-secondary: 'Quicksand';
     
     --fs-h1: 3rem;
-    --fs-h2: 2.5rem;
+    --fs-h2: 2rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 }
@@ -41,7 +41,7 @@ html {
 @media (min-width: 800px) {
     :root {
         --fs-h1: 4rem;
-        --fs-h2: 3.75rem;
+        --fs-h2: 2.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
@@ -133,10 +133,10 @@ main {
 
 #important-info {
      background: linear-gradient(
-        var(--clr-yellow),
+        var(--clr-pink),
         #F1B4349d
     ),
-    url(../assets/branding/pattern-04.webp);
+    url(../assets/branding/pattern-03.webp);
     background-repeat: repeat;
     background-attachment: fixed;
     background-position: center bottom;
@@ -178,6 +178,11 @@ footer {
 .care-guide-welcome article {
     padding-top:8em;
 }
+
+#important-info h2 {
+    color: white;
+}
+
 @media (min-width: 1024px) {
     .tile-container {
         display: grid;
