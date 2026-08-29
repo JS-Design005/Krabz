@@ -24,8 +24,23 @@
 
         <title>Krabz - Care Guide</title>
 
+        <!-- Since this page cannot have the preloader, I wanted to add an animation to it so that is is still a smoth transition! -->
+        <style>
+            /* 1. Set up the starting state */
+            .fade-in-content {
+                opacity: 0;
+                animation: smoothFade 0.8s ease-out;
+            }
+
+            /* 2. Define the animation rules */
+            @keyframes smoothFade {
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
     </head>
-    <body>
+    <body class="fade-in-content">
         <header>
             <img src="../assets/branding/header-logo.webp" alt="Logo" class="header-logo" oncontextmenu="return false">
             <!-- Shopping cart inspired by freecodecamp -->
