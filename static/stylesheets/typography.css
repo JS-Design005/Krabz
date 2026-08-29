@@ -46,6 +46,7 @@ small {
     left: 10px;
     right: 10px;
     color: rgb(91, 57, 119);
+    font-family: var(--ff-secondary);
 }
 
 h2:not(#about h2, #important-info h2, #welcome h2) { margin-top: 2em; }
