@@ -72,6 +72,10 @@ main a:visited:not(.btn, .prev, .next, .tile, .gallery-tile) {
     color: var(--clr-pink);
 }
 
+.breadcrumbs a, .breadcrumbs li {
+    font-family: var(--ff-secondary);
+}
+
 @media (min-width: 1024px)  {
     h2:not(#about h2, #important-info h2, #welcome h2) {
         margin-top: 1em;
