@@ -23,10 +23,14 @@
         <link rel="stylesheet" href="../stylesheets/shop.css">
         <link rel="stylesheet" href="../stylesheets/cart.css">
 
-        <title>Krabz - Shop</title>
+        <title>Krabz - Cart</title>
 
     </head>
     <body>
+        <div id="loader-wrapper">
+            <div class="spinner"></div>
+            <p class="loading-text">Just a moment...</p>
+        </div>
         <header>
             <img src="../assets/branding/header-logo.webp" alt="Logo" class="header-logo" oncontextmenu="return false">
             <!-- Shopping cart inspired by freecodecamp -->
@@ -67,10 +71,6 @@
             </nav>
         </header>
         <main class="article-content">
-            <div id="loader-wrapper">
-                <div class="spinner"></div>
-                <p class="loading-text">Just a moment...</p>
-            </div>
             <section class=" set-min-height">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
                     <ul>
@@ -124,5 +124,6 @@
         <script src="../scripts/global-manager.js"></script>
         <script src="../scripts/nav.js"></script>
         <script src="../scripts/cart-page-manager.js"></script>
+        <script src="../scripts/preloader.js"></script>
     </body>
 </html>
