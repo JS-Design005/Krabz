@@ -40,7 +40,7 @@ function renderCartPage() {
                         
 
                         <img class="item-img" src="${product.image}" alt="${product.name}">
-                    <div class="item-info">
+                            <div class="item-info">
                             <span><b>${product.name}</b></span>
                             <span>$${parseFloat(product.price).toFixed(2)}</span>
                             <button class="remove-btn" data-index="${index}">Remove</button>

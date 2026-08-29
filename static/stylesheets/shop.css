@@ -110,6 +110,10 @@ hr {
     margin-top: 1.5em;
 }
 
+.item-info span {
+    font-family: var(--ff-secondary);
+}
+
 .item-img {
     width: 50%;
     margin-left: auto;
@@ -120,6 +124,16 @@ hr {
     margin-bottom: 2em;
 }
 
+.out-of-stock-notice, .in-store-notice{
+    border: 1px solid var(--clr-yellow);
+    border-radius: 30px;
+    padding: 1em;
+}
+
+#reviews-container {
+    font-family: var(--ff-secondary);
+}
+
 .set-min-height {
     min-height: calc(100vh - 250px);
 }
@@ -128,6 +142,7 @@ hr {
     border: 1px solid var(--clr-yellow);
     background-color: transparent;
     color: var(--clr-yellow);
+    font-family: var(--ff-primary);
     padding: 5px;
     border-radius: 10px;
     transition: background-color 0.2s ease-in-out;
@@ -140,6 +155,13 @@ hr {
     background-color: transparent;
     color: var(--clr-yellow);
 
+}
+
+#success-message {
+    border: 1px solid green;
+    border-radius: 30px;
+    padding: 1em;
+    font-family: var(--ff-secondary);
 }
 
 @media (min-width: 1024px) {

@@ -38,6 +38,10 @@ html {
   font-style: normal;
 }
 
+#item-count {
+    font-family: var(--ff-secondary)
+}
+
 @media (min-width: 800px) {
     :root {
         --fs-h1: 4rem;

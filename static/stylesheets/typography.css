@@ -18,7 +18,7 @@ article h3 {
     margin-top: 1.5em;
 }
 
-h1, h2, h3 {
+h1, h2, h3, label {
     Font-family: var(--ff-primary);
     font-weight: var(--fw-bold);
 }

@@ -46,7 +46,7 @@ fetch('../data/products.json')
                     reviewsContainer.appendChild(reviewDiv);
                 });
             } else {
-                reviewsContainer.innerText = "No reviews for this product yet.";
+                reviewsContainer.innerText = "No reviews for this product yet!";
             }
 
             // --- NEW: IN-STORE ONLY BOOLEAN CHECK ---
@@ -59,8 +59,8 @@ fetch('../data/products.json')
                     const storeNotice = document.createElement('div');
                     storeNotice.className = 'in-store-notice';
                     storeNotice.innerHTML = `
-                        <p><strong>In-Store Only Adoption</strong></p>
-                        <p style="font-size: 0.95rem; margin-top: 5px;">To keep our live Krabz healthy and safe, they cannot be shipped. Please visit your local Petstock branch to adopt!</p>
+                        <h3>In-Store Only Adoption</h3>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">To keep our live Krabz healthy and safe, they cannot be shipped. Please visit your local Petstore to adopt!</p>
                     `;
                     parentContainer.appendChild(storeNotice);
                 }
@@ -74,7 +74,7 @@ fetch('../data/products.json')
                     const stockNotice = document.createElement('div');
                     stockNotice.className = 'out-of-stock-notice'; // Gave this its own class name for custom CSS styling
                     stockNotice.innerHTML = `
-                        <p><strong>Out of Stock!</strong></p>
+                        <h3>Out of Stock!</h3>
                         <p style="font-size: 0.95rem; margin-top: 5px;">Don't worry! We expect to have more of this product back in stock soon!</p>
                     `;
                     parentContainer.appendChild(stockNotice);

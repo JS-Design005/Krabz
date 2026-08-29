@@ -22,5 +22,6 @@ input[type="text"], input[type="email"] {
   padding: 10px;
   margin-bottom: 20px;
   margin-top: 10px;
+  font-family: var(--ff-secondary)
 }
 
