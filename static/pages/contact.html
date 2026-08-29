@@ -13,16 +13,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <link rel="icon" type="image/png" href="../assets/branding/favicon.png">
-        <link rel="stylesheet" href="../stylesheets/global-styles.css">
+        
         <link rel="stylesheet" href="../stylesheets/typography.css">
         <link rel="stylesheet" href="../stylesheets/nav.css">
-        <link rel="stylesheet" href="../stylesheets/slides.css">
         <link rel="stylesheet" href="../stylesheets/contact.css">
+        <link rel="stylesheet" href="../stylesheets/cart.css">
+        <link rel="stylesheet" href="../stylesheets/global-styles.css">
 
         <title>Krabz - Contact Us</title>
 
     </head>
     <body>
+        <div id="loader-wrapper">
+            <div class="spinner"></div>
+            <p class="loading-text">Just a moment...</p>
+        </div>
         <header>
             <img src="../assets/branding/header-logo.webp" alt="Logo" class="header-logo" oncontextmenu="return false">
             <!-- Shopping cart inspired by freecodecamp -->
@@ -62,20 +67,23 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="article-content">
             <section>
                 <article>
-                    <h1>Contact us</h1>
+                    <h1 class="purple">Contact us</h1>
+                    <br>
                     <p>Do you have any comments, questions or suggestions? We would be delighted to hear from you!</p>
+
+                    <form action="" id="contact-form">
+                        <input type="text" name="name" id="name" maxlength="30" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" maxlength="30" placeholder="Your Email" required>
+                        <textarea id="message" name="message" maxlength="1000" required placeholder="We are here to help! Type your message here and press send!"></textarea>
+
+                        <button id="submit-btn" type="submit" class="btn gray txt-gray">Send</button>
+                    </form>
                 </article>
                 
-                <form action="" id="contact-form">
-                    <input type="text" name="name" id="name" maxlength="30" placeholder="Your Name" required>
-                    <input type="email" name="email" id="email" maxlength="30" placeholder="Your Email" required>
-                    <textarea id="message" name="message" maxlength="1000" required placeholder="We are here to help! Type your message here and press send!"></textarea>
-
-                    <button id="submit-btn" type="submit" class="btn white txt-pink">Send</button>
-                </form>
+                
             </section>
         </main>
         <footer>
@@ -85,10 +93,12 @@
                 <a class="social-btn" id="facebook-btn" href="#"><img src="../assets/branding/socials-03.webp" alt="social icon" class="social-icon"></a>
                 <a class="social-btn" id="instagram" href="#"><img src="../assets/branding/socials-04.webp" alt="social icon" class="social-icon"></a>
             </div>
-            <small>*Please Note, this is a folio piece, not a real shopping site or company! &copy; All rights reserved! </small>
+            <small>*Please Note, this is a folio piece, not a real shopping site or company! This form is a mock form, no orders will be placed! Please do not use real details on this form. &copy; All rights reserved! Website and branding by Jojo Smith 2026.</small>
         </footer>
 
         <script src="../scripts/nav.js"></script>
         <script src="../scripts/global-manager.js"></script>
+        <script src="../scripts/cart-page-manager.js"></script>
+        <script src="../scripts/preloader.js"></script>
     </body>
 </html>

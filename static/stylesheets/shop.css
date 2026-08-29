@@ -29,6 +29,7 @@ section {
 
 .btn {
     min-width: 7em;
+    background-color: transparent;
 }
 
 .gallery {
@@ -113,6 +114,14 @@ hr {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.product-info {
+    margin-bottom: 2em;
+}
+
+.set-min-height {
+    min-height: calc(100vh - 250px);
 }
 
 .remove-btn {

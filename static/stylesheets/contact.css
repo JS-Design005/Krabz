@@ -10,32 +10,26 @@ main {
     url(../assets/branding/pattern-04.webp);
     position: relative;
 }
-p {
-    padding: 1em;
-}
+
 section {
-    position: absolute;
-    background: url(../assets/branding/background-02.webp);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: right bottom;
-    padding: 2em;
-    padding-top: calc(60px + 2em);
-    bottom: 0;
-    right:0;
+
     width: 100vw;
     height: 100%;
-    color: var(--clr-white);
+
 }
 
 textarea {
-    max-width: 100%;
+    width: 100%;
     max-height: 200px;
     resize: vertical;
     padding: 1.5em;
 
     white-space: pre-wrap;
     word-wrap: break-word;
+}
+article {
+    margin-top: 4em;
+    margin-bottom: 2em;
 }
 
 
@@ -45,24 +39,24 @@ input[type="text"], input[type="email"] , textarea {
     padding: 1em;
     box-sizing: border-box;
     border: none;
+    font-family: var(--ff-primary);
+}
+
+#name, #email {
     width: 100%;
-    color: var(--clr-white);
 }
 
 input[type="text"]:focus, input[type="email"]:focus , textarea:focus {
     outline: 2px solid var(--clr-white);
 }
 #contact-form {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    display: block;
+
 }
 
 #submit-btn {
     background: transparent;
-    width: 100%;
-    color: var(--clr-white);
 }
 
 @media (min-width: 1024px) {
@@ -78,5 +72,10 @@ input[type="text"]:focus, input[type="email"]:focus , textarea:focus {
         width: calc(50% - 5px);
         height: 50px;
         padding: 12px;
+    }
+
+    article {
+        margin-top: 0em;
+        margin-bottom: 2em;
     }
 }

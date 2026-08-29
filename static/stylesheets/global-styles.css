@@ -55,12 +55,19 @@ main {
     flex-direction: column;
 }
 
-
-
 .overlay-wrapper-02 {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+#cart-btn:hover svg{
+    color: var(--clr-yellow);
+}
+
+#cart-btn:hover span {
+    background-color: var(--clr-yellow);
+    color: var(--clr-purple);
 }
 
 #about {
@@ -82,6 +89,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     flex-grow: 1;
+    margin-bottom: 3em;
 }
 
 .tile-container a {
@@ -99,7 +107,7 @@ main {
 .tile {
     text-align: center;
     background-color: #d4d6ee77 ;
-    padding: 1em;
+    padding: 2em;
     width: 100%;
     height: 100%;
     border-radius: 30px;
@@ -115,6 +123,30 @@ main {
     border-radius: 10px;
     padding: 2em 0;
 }
+
+.iframe-container {
+    display: flex;
+    box-sizing: border-box;
+    overflow-x: auto;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    -ms-overflow-style: none; /* Hide scrollbar from IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar from Firefox */
+}
+
+.iframe-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar from Chrome, Safari and Opera */
+}
+
+.iframe-container iframe {
+    border-radius: 30px;
+}
+
 
 #welcome {
      background: linear-gradient(
@@ -163,12 +195,16 @@ main {
 
 footer {
     width: 100%;
-    height: 140px;
+    height: 160px;
     background-color: var(--clr-purple);
     position: relative;
 }
 
 .article-content {
+    background-image: url(../assets/branding/background-01.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
     background-color: white;
 }
 
@@ -200,7 +236,7 @@ footer {
     }
 
     .tile {
-        padding: 3em;
+        padding: 2em;
         max-width: 400px;  
         height: 50vh;     
     }
@@ -210,7 +246,7 @@ footer {
     }
 
     #important-info {
-        height: calc(100vh - 60px);
+        height: 100vh;
     }
 
     .overlay-03 {

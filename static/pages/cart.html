@@ -62,8 +62,12 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <section>
+        <main class="article-content">
+            <div id="loader-wrapper">
+                <div class="spinner"></div>
+                <p class="loading-text">Just a moment...</p>
+            </div>
+            <section class=" set-min-height">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
                     <ul>
                         <li><a href="../../index.html">Home</a></li>
@@ -73,7 +77,7 @@
                 </nav>
                 <div class="info-container">
                     <div class="product-info">
-                        <h1>Your Order</h1>
+                        <h1 class="purple">Your Order</h1>
                         <div class="cart-container"></div>
                     </div>
                     <form id="payment-form" class="desc">
@@ -116,5 +120,6 @@
         <script src="../scripts/global-manager.js"></script>
         <script src="../scripts/nav.js"></script>
         <script src="../scripts/cart-page-manager.js"></script>
+        <script src="../scripts/preloader.js"></script>
     </body>
 </html>
