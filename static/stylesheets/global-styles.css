@@ -200,7 +200,7 @@ footer {
     position: relative;
 }
 
-.article-content {
+.article-content, .background {
     background-image: url(../assets/branding/background-01.webp);
     background-repeat: no-repeat;
     background-size: 100%;
